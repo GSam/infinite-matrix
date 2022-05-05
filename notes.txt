@@ -1,0 +1,172 @@
+(Pdb) ones.gmul('gmul(symengine.sympify('1/(1-x)')), n = 10)
+*** SyntaxError: invalid syntax
+(Pdb) symengine.series(ra.gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 4*x**2 + 8*x**3 + 16*x**4 + 32*x**5 + 64*x**6 + 128*x**7 + 256*x**8 + 512*x**9
+(Pdb) symengine.series(ones.gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 3*x**2 + 4*x**3 + 5*x**4 + 6*x**5 + 7*x**6 + 8*x**7 + 9*x**8 + 10*x**9
+(Pdb) symengine.series(iden.gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + x + x**2 + x**3 + x**4 + x**5 + x**6 + x**7 + x**8 + x**9
+(Pdb) symengine.series(ones.gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 3*x**2 + 4*x**3 + 5*x**4 + 6*x**5 + 7*x**6 + 8*x**7 + 9*x**8 + 10*x**9
+(Pdb) symengine.series(ones.gmul(symengine.sympify('x/(1-x)')), n = 10)
+x + 2*x**2 + 3*x**3 + 4*x**4 + 5*x**5 + 6*x**6 + 7*x**7 + 8*x**8 + 9*x**9
+(Pdb) symengine.series(ones.gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 3*x**2 + 4*x**3 + 5*x**4 + 6*x**5 + 7*x**6 + 8*x**7 + 9*x**8 + 10*x**9
+(Pdb) symengine.series(ones.gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 4*x**2 + 7*x**3 + 12*x**4 + 20*x**5 + 33*x**6 + 54*x**7 + 88*x**8 + 143*x**9
+(Pdb) symengine.series(iden.gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + x + 2*x**2 + 3*x**3 + 5*x**4 + 8*x**5 + 13*x**6 + 21*x**7 + 34*x**8 + 55*x**9
+(Pdb) symengine.series(ra.gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 5*x**2 + 13*x**3 + 34*x**4 + 89*x**5 + 233*x**6 + 610*x**7 + 1597*x**8 + 4181*x**9
+(Pdb) symengine.series(ra.gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 5*x**2 + 13*x**3 + 34*x**4 + 89*x**5 + 233*x**6 + 610*x**7 + 1597*x**8 + 4181*x**9
+(Pdb) symengine.series((ra*ra).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 3*x + 10*x**2 + 35*x**3 + 125*x**4 + 450*x**5 + 1625*x**6 + 5875*x**7 + 21250*x**8 + 76875*x**9
+(Pdb) symengine.series((ra*ra*ra).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 4*x + 17*x**2 + 75*x**3 + 338*x**4 + 1541*x**5 + 7069*x**6 + 32532*x**7 + 149965*x**8 + 691903*x**9
+(Pdb) symengine.series((ra*ra*ra*ra).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 5*x + 26*x**2 + 139*x**3 + 757*x**4 + 4172*x**5 + 23165*x**6 + 129217*x**7 + 722818*x**8 + 4050239*x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-2x)')), n = 10)
+1 + 3*x + 9*x**2 + 27*x**3 + 81*x**4 + 243*x**5 + 729*x**6 + 2187*x**7 + 6561*x**8 + 19683*x**9
+(Pdb) symengine.series((ra*ra).gmul(symengine.sympify('1/(1-2x)')), n = 10)
+1 + 4*x + 16*x**2 + 64*x**3 + 256*x**4 + 1024*x**5 + 4096*x**6 + 16384*x**7 + 65536*x**8 + 262144*x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-2x)')), n = 10)
+1 + 3*x + 9*x**2 + 27*x**3 + 81*x**4 + 243*x**5 + 729*x**6 + 2187*x**7 + 6561*x**8 + 19683*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-2x)')), n = 10)
+1 + 2*x + 4*x**2 + 8*x**3 + 16*x**4 + 32*x**5 + 64*x**6 + 128*x**7 + 256*x**8 + 512*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-2x)')), n = 10)
+1 + 3*x + 7*x**2 + 15*x**3 + 31*x**4 + 63*x**5 + 127*x**6 + 255*x**7 + 511*x**8 + 1023*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 4*x**2 + 7*x**3 + 12*x**4 + 20*x**5 + 33*x**6 + 54*x**7 + 88*x**8 + 143*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 4*x**2 + 7*x**3 + 12*x**4 + 20*x**5 + 33*x**6 + 54*x**7 + 88*x**8 + 143*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 4*x**2 + 7*x**3 + 12*x**4 + 20*x**5 + 33*x**6 + 54*x**7 + 88*x**8 + 143*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 3*x**2 + 4*x**3 + 5*x**4 + 6*x**5 + 7*x**6 + 8*x**7 + 9*x**8 + 10*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-2x)')), n = 10)
+1 + 3*x + 7*x**2 + 15*x**3 + 31*x**4 + 63*x**5 + 127*x**6 + 255*x**7 + 511*x**8 + 1023*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('x')), n = 10)
+x + x**2 + x**3 + x**4 + x**5 + x**6 + x**7 + x**8 + x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1')), n = 10)
+1 + x + x**2 + x**3 + x**4 + x**5 + x**6 + x**7 + x**8 + x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('2')), n = 10)
+2 + 2*x + 2*x**2 + 2*x**3 + 2*x**4 + 2*x**5 + 2*x**6 + 2*x**7 + 2*x**8 + 2*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('3')), n = 10)
+3 + 3*x + 3*x**2 + 3*x**3 + 3*x**4 + 3*x**5 + 3*x**6 + 3*x**7 + 3*x**8 + 3*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1+x')), n = 10)
+1 + 2*x + 2*x**2 + 2*x**3 + 2*x**4 + 2*x**5 + 2*x**6 + 2*x**7 + 2*x**8 + 2*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('2/(1-x)')), n = 10)
+2 + 4*x + 6*x**2 + 8*x**3 + 10*x**4 + 12*x**5 + 14*x**6 + 16*x**7 + 18*x**8 + 20*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 3*x**2 + 4*x**3 + 5*x**4 + 6*x**5 + 7*x**6 + 8*x**7 + 9*x**8 + 10*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + x + x**2 + x**3 + x**4 + x**5 + x**6 + x**7 + x**8 + x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('2/(1-x)')), n = 10)
+2 + 2*x + 2*x**2 + 2*x**3 + 2*x**4 + 2*x**5 + 2*x**6 + 2*x**7 + 2*x**8 + 2*x**9
+(Pdb) symengine.series((one).gmul(symengine.sympify('2/(1-x)')), n = 10)
+*** NameError: name 'one' is not defined
+(Pdb) symengine.series((ones).gmul(symengine.sympify('2/(1-x)')), n = 10)
+2 + 4*x + 6*x**2 + 8*x**3 + 10*x**4 + 12*x**5 + 14*x**6 + 16*x**7 + 18*x**8 + 20*x**9
+(Pdb) symengine.series((one).gmul(symengine.sympify('1/(1-x)')), n = 10)
+*** NameError: name 'one' is not defined
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 3*x**2 + 4*x**3 + 5*x**4 + 6*x**5 + 7*x**6 + 8*x**7 + 9*x**8 + 10*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x)**2')), n = 10)
+1 + 3*x + 6*x**2 + 10*x**3 + 15*x**4 + 21*x**5 + 28*x**6 + 36*x**7 + 45*x**8 + 55*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-x)**2')), n = 10)
+1 + 2*x + 3*x**2 + 4*x**3 + 5*x**4 + 6*x**5 + 7*x**6 + 8*x**7 + 9*x**8 + 10*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-x**2)')), n = 10)
+1 + x**2 + x**4 + x**6 + x**8
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x**2)')), n = 10)
+1 + x + 2*x**2 + 2*x**3 + 3*x**4 + 3*x**5 + 4*x**6 + 4*x**7 + 5*x**8 + 5*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 4*x**2 + 7*x**3 + 12*x**4 + 20*x**5 + 33*x**6 + 54*x**7 + 88*x**8 + 143*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + x + 2*x**2 + 3*x**3 + 5*x**4 + 8*x**5 + 13*x**6 + 21*x**7 + 34*x**8 + 55*x**9
+(Pdb) symengine.series((ones*ones).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 3*x + 7*x**2 + 14*x**3 + 26*x**4 + 46*x**5 + 79*x**6 + 133*x**7 + 221*x**8 + 364*x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 5*x**2 + 13*x**3 + 34*x**4 + 89*x**5 + 233*x**6 + 610*x**7 + 1597*x**8 + 4181*x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-x**2)')), n = 10)
+1 + x + 2*x**2 + 4*x**3 + 8*x**4 + 16*x**5 + 32*x**6 + 64*x**7 + 128*x**8 + 256*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-x**2)')), n = 10)
+1 + x**2 + x**4 + x**6 + x**8
+(Pdb) symengine.series((iden).gmul(symengine.sympify('2/(1-x)')), n = 10)
+2 + 2*x + 2*x**2 + 2*x**3 + 2*x**4 + 2*x**5 + 2*x**6 + 2*x**7 + 2*x**8 + 2*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + x + x**2 + x**3 + x**4 + x**5 + x**6 + x**7 + x**8 + x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 4*x**2 + 8*x**3 + 16*x**4 + 32*x**5 + 64*x**6 + 128*x**7 + 256*x**8 + 512*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-2x)')), n = 10)
+1 + 2*x + 4*x**2 + 8*x**3 + 16*x**4 + 32*x**5 + 64*x**6 + 128*x**7 + 256*x**8 + 512*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-2x)')), n = 10)
+1 + 3*x + 7*x**2 + 15*x**3 + 31*x**4 + 63*x**5 + 127*x**6 + 255*x**7 + 511*x**8 + 1023*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1+x+x**2')), n = 10)
+1 + 2*x + 3*x**2 + 3*x**3 + 3*x**4 + 3*x**5 + 3*x**6 + 3*x**7 + 3*x**8 + 3*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1+x')), n = 10)
+1 + 2*x + 2*x**2 + 2*x**3 + 2*x**4 + 2*x**5 + 2*x**6 + 2*x**7 + 2*x**8 + 2*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1')), n = 10)
+1 + x + x**2 + x**3 + x**4 + x**5 + x**6 + x**7 + x**8 + x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1+2x+3x**2')), n = 10)
+1 + 3*x + 6*x**2 + 6*x**3 + 6*x**4 + 6*x**5 + 6*x**6 + 6*x**7 + 6*x**8 + 6*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 3*x**2 + 4*x**3 + 5*x**4 + 6*x**5 + 7*x**6 + 8*x**7 + 9*x**8 + 10*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 4*x**2 + 7*x**3 + 12*x**4 + 20*x**5 + 33*x**6 + 54*x**7 + 88*x**8 + 143*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + x + 2*x**2 + 3*x**3 + 5*x**4 + 8*x**5 + 13*x**6 + 21*x**7 + 34*x**8 + 55*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1')), n = 10)
+1
+(Pdb) RiordanArray(sympy.sympify('1+x'), sympy.sympify('x'))
+<riordan.matrix.RiordanArray object at 0x7fbef823ef60>
+(Pdb) RiordanArray(sympy.sympify('1+x'), sympy.sympify('x')).matrix(10)
+[[1, 1], [1, 1, 0], [1, 1, 0, 0], [1, 1, 0, 0, 0], [1, 1, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+*** ValueError: setting an array element with a sequence.
+(Pdb) RiordanArray(sympy.sympify('1+x'), sympy.sympify('x')).matrix(10)
+[[1, 1], [1, 1, 0], [1, 1, 0, 0], [1, 1, 0, 0, 0], [1, 1, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+*** ValueError: setting an array element with a sequence.
+(Pdb) RiordanArray(sympy.sympify('1+x'), sympy.sympify('x')).matrix(5)
+[[1, 1], [1, 1, 0], [1, 1, 0, 0], [1, 1, 0, 0, 0], [1, 0, 0, 0, 0]]
+*** ValueError: setting an array element with a sequence.
+(Pdb) RiordanArray(sympy.sympify('1+x'), sympy.sympify('x')).matrix(5)
+[[1, 1], [1, 1, 0], [1, 1, 0, 0], [1, 1, 0, 0, 0], [1, 0, 0, 0, 0]]
+*** ValueError: setting an array element with a sequence.
+(Pdb) RiordanArray(sympy.sympify('1-x'), sympy.sympify('x')).matrix(5)
+[[-1, 1], [-1, 1, 0], [-1, 1, 0, 0], [-1, 1, 0, 0, 0], [1, 0, 0, 0, 0]]
+*** ValueError: setting an array element with a sequence.
+(Pdb) RiordanArray(sympy.sympify('1+x'), sympy.sympify('x'))
+<riordan.matrix.RiordanArray object at 0x7fbef823ec50>
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 5*x**2 + 13*x**3 + 34*x**4 + 89*x**5 + 233*x**6 + 610*x**7 + 1597*x**8 + 4181*x**9
+(Pdb) symengine.series((ones).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 4*x**2 + 7*x**3 + 12*x**4 + 20*x**5 + 33*x**6 + 54*x**7 + 88*x**8 + 143*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + x + 2*x**2 + 3*x**3 + 5*x**4 + 8*x**5 + 13*x**6 + 21*x**7 + 34*x**8 + 55*x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 5*x**2 + 13*x**3 + 34*x**4 + 89*x**5 + 233*x**6 + 610*x**7 + 1597*x**8 + 4181*x**9
+(Pdb) symengine.series((ra*ra).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 3*x + 10*x**2 + 35*x**3 + 125*x**4 + 450*x**5 + 1625*x**6 + 5875*x**7 + 21250*x**8 + 76875*x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 5*x**2 + 13*x**3 + 34*x**4 + 89*x**5 + 233*x**6 + 610*x**7 + 1597*x**8 + 4181*x**9
+(Pdb) symengine.series((ra).gmul(ra).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+*** AttributeError: 'RiordanArray' object has no attribute 'subs'
+(Pdb) symengine.series((ra).gmul(ra).gmul(symengine.sympify('1/(1-x-x**2)'))), n = 10)
+*** SyntaxError: invalid syntax
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-x-x**2)')), n = 10)
+1 + 2*x + 5*x**2 + 13*x**3 + 34*x**4 + 89*x**5 + 233*x**6 + 610*x**7 + 1597*x**8 + 4181*x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1 + 2*x + 5*x**2 + 13*x**3 + 34*x**4 + 89*x**5 + 233*x**6 + 610*x**7 + 1597*x**8 + 4181*x**9')), n = 10)
+1 + 3*x + 10*x**2 + 35*x**3 + 125*x**4 + 450*x**5 + 1625*x**6 + 5875*x**7 + 21250*x**8 + 76875*x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 4*x**2 + 8*x**3 + 16*x**4 + 32*x**5 + 64*x**6 + 128*x**7 + 256*x**8 + 512*x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + x + x**2 + x**3 + x**4 + x**5 + x**6 + x**7 + x**8 + x**9
+(Pdb) symengine.series((iden).gmul(symengine.sympify('1/(1-2x)')), n = 10)
+1 + 2*x + 4*x**2 + 8*x**3 + 16*x**4 + 32*x**5 + 64*x**6 + 128*x**7 + 256*x**8 + 512*x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-2x)')), n = 10)
+1 + 3*x + 9*x**2 + 27*x**3 + 81*x**4 + 243*x**5 + 729*x**6 + 2187*x**7 + 6561*x**8 + 19683*x**9
+(Pdb) symengine.series((ra).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 2*x + 4*x**2 + 8*x**3 + 16*x**4 + 32*x**5 + 64*x**6 + 128*x**7 + 256*x**8 + 512*x**9
+(Pdb) symengine.series((ra*ra).gmul(symengine.sympify('1/(1-x)')), n = 10)
+1 + 3*x + 9*x**2 + 27*x**3 + 81*x**4 + 243*x**5 + 729*x**6 + 2187*x**7 + 6561*x**8 + 19683*x**9
+
